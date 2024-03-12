@@ -9,7 +9,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Paso 1
+      - name: Paso 5
         if: ${{ secrets.VALOR_CONDICION == 3 }}
         run: echo "Este es el paso cuando vale 3"
 
