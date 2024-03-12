@@ -1,0 +1,22 @@
+name: Ejemplo de GitHub Actions con secreto condicional
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Paso 1
+        if: secrets.MY_SECRET == '3'
+        run: echo "Este es el paso cuando vale 3"
+
+      - name: Paso 2
+        if: secrets.MY_SECRET == '2'
+        run: echo "Este es el paso cuando vale 2"
+
+      - name: Paso 3
+        if: secrets.MY_SECRET == '1'
+        run: echo "Este es el paso 3 y se ejecutará solo si el secreto tiene el valor esperado"
