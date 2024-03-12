@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Paso 1
-        if: ${{ env.MY_SECRET == '3' }}
+        if: ${{ env.MY_SECRET == 3 }}
         run: echo "Este es el paso cuando vale 3"
 
       - name: Paso 2
