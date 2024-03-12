@@ -8,15 +8,16 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+   
     steps:
       - name: Paso 5
-        if: ${{ secrets.VALOR_CONDICION == 3 }}
+        if: ${{ secrets.VALOR_CONDICION }} == 3 
         run: echo "Este es el paso cuando vale 3"
 
       - name: Paso 2
-        if: ${{ secrets.VALOR_CONDICION == '2' }}
+        if: ${{ secrets.VALOR_CONDICION }} == '2' 
         run: echo "Este es el paso cuando vale 2"
 
       - name: Paso 3
-        if: ${{ secrets.VALOR_CONDICION== '1' }}
+        if: ${{ secrets.VALOR_CONDICION }} == '1' 
         run: echo "Este es el paso 3 y se ejecutará solo si el secreto tiene el valor esperado"
