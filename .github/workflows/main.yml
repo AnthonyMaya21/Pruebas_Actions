@@ -12,7 +12,7 @@ jobs:
     steps:
       - name: Paso 5
         if: ${{ secrets.VALOR_CONDICION }} == 5
-        run: echo "Este es el paso cuando vale 3"
+        run: echo "Este es el  cuando vale 3"
 
       - name: Paso 2
         if: ${{ secrets.VALOR_CONDICION }} == '2' 
