@@ -11,7 +11,7 @@ jobs:
     steps:
     
       - name: Paso 2
-        if: ${{ env.OPCION == '1' }}
+        if: ${{ vars.OPCION == '1' }}
         run: echo "Este es el  cuando vale 3"
         
       - name: Paso 2
