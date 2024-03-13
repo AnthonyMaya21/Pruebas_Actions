@@ -10,18 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     
-      - name: OBTENER
-        run: echo "::set-env name=MY_SECRET::${{ secrets.VALOR_CONDICION }}"
-        shell: bash
-  
-      - name: Paso 5
-        if: ${{ env.MY_SECRET }} == 5
-        run: echo "Este es el  cuando vale 3"
-
       - name: Paso 2
-        if: ${{ env.MY_SECRET }} == '2' 
-        run: echo "Este es el paso cuando vale 2"
-
-      - name: Paso 3
-        if: ${{ env.MY_SECRET }} == '1' 
-        run: echo "Este es el paso 3 y se ejecutará solo si el secreto tiene el valor esperado"
+        if: ${{ env.OPCION == '1' }}
+        run: echo "Este es el  cuando vale 3"
+        
+      - name: Paso 2
+        run: echo "Este es el  cuando vale 3"
